@@ -19,7 +19,7 @@ while 1:
         os.makedirs("output",exist_ok=True)
         with open(os.path.join("output",imgname), "wb") as fout:
             fout.write(rawimg)
-    break
+    break #繰り返し取得する場合はsleep等をいれてください。
 
 
 
