@@ -8,7 +8,7 @@ NDL-ImageLabelを学習データとして、マルチラベル画像分類（1�
 本リポジトリで公開しているソースコード内のモデルにはEfficientNetB0を利用しています。
 
 ## 2.公開しているモデルについて
-NDL-ImageLabelのうち、一般公開していないpicture_personを含めたモデルについて、次のURLからモデルを公開しています。
+NDL-ImageLabelに加えて、一般公開していないpicture_personを含めたデータで学習したモデルについて、次のURLから公開しています。
 
 https://lab.ndl.go.jp/dataset/tagestimatemodel/weights_ndllabelimage.hdf5
 
