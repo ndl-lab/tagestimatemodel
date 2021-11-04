@@ -27,7 +27,7 @@ print(model.summary())
 
 classdic={0:"graphic",1:"picture",2:"graphic_graph",3:"graphic_map",4:"graphic_illustcolor",
         5:"picture_indoor",6:"picture_object",7:"picture_person",8:"picture_outdoor",9:"picture_landmark",10:"stamp"}
-weights_path = 'val_loss0.072.hdf5'
+weights_path = 'weights_ndllabelimage.hdf5'
 model.load_weights(weights_path)
 import random
 if __name__ == '__main__':
