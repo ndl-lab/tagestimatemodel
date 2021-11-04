@@ -6,14 +6,18 @@ NDL-ImageLabelを学習データとして、マルチラベル画像分類（1�
 本リポジトリで公開しているソースコード内のモデルにはEfficientNetB0を利用しています。
 
 ## 2.公開しているモデルについて
-NDL-ImageLabelのうち、一般公開していないpicture_personを含めたモデルについて、次のURLからモデルを公開しています。これは、次世代デジタルライブラリーにおいてタグの自動付与に用いているモデルと同じものです。
-
-性能の目安として、NDL-ImageLabelのうち1割の画像をvalidation dataとした場合、validation scoreはmacro-F1 scoreで0.89～0.91程度になります。
+NDL-ImageLabelのうち、一般公開していないpicture_personを含めたモデルについて、次のURLからモデルを公開しています。
 
 https://lab.ndl.go.jp/dataset/tagestimatemodel/weights_ndllabelimage.hdf5
-推論のコード例については以下を参照してください。
 
-同じ階層にweights_ndllabelimage.hdf5を配置して実行すると、inputフォルダ内の資料について、タグの自動付与が行われた結果がoutputフォルダにjsonとして出力されます。
+これは、次世代デジタルライブラリーにおいてタグの自動付与に用いているモデルと同じものです。
+
+性能の目安として、NDL-ImageLabelのうちランダムな1割の画像をvalidation dataとした場合、validation scoreはmacro-F1 scoreで0.89～0.91程度になります。
+
+
+推論のコード例についてはmultiinference.pyを参照してください。
+
+multiinference.pyと同じ階層にweights_ndllabelimage.hdf5を配置して実行すると、inputフォルダ内の資料について、タグの自動付与が行われた結果がoutputフォルダにjsonとして出力されます。
 
 NDl-ImageLabelのタグはタグ同士が緩やかな包含関係（例：picture_landmarkとpicture_outdoor）を持つように設計しているため、下表のように、1つのタグに1~3つのラベルを対応させて学習しています。
 
@@ -34,9 +38,7 @@ NDl-ImageLabelのタグはタグ同士が緩やかな包含関係（例：pictur
 ## 3.モデルの再学習について
 datasetpdmフォルダ内にNDL-ImageLabelを展開するか、4で取得・分類したオリジナルな画像ファイルを、クラスごとに分けて配置してください。NDL-ImageLabelを利用する場合は、
 picture_personフォルダは存在しないので自分で取得する必要があります。
-配置後、
-
-を実行するとweights_pdm_multiフォルダ内に学習済モデルが出力されます。
+配置後、multitrain_efficientnet.pyを実行するとweights_pdm_multiフォルダ内に学習済モデルが出力されます。
 
 
 ## 4. 学習データを追加するには
@@ -54,10 +56,9 @@ https://www.dl.ndl.go.jp/api/iiif/(資料のPID)/R(0埋め7桁のコマ番号)/p
 
 となります。
 
-pythonの場合の画像取得のサンプルコードを以下に掲載しています。
+pythonの場合の画像取得のサンプルコードをnewdataclawer.pyに掲載しています。
 
 今回利用しているモデルは完璧ではないので、上記の手順で取得した画像には誤分類が含まれるはずです。
-
 また、例えば自然の風景（山や森）を分類したいといった、NDL-ImageLabelで設定しているタグより細かい分類のニーズもあると思います。
 
 NDL-ImageLabelや本リポジトリで公開しているモデルはあくまでスタートラインです。
