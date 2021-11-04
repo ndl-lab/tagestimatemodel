@@ -1,5 +1,7 @@
 # tagestimatemodel
-NDL-ImageLabelデータセット(https://github.com/ndl-lab/imagetagdataset)を利用して、資料画像に対するタグを推定するモデルです。
+NDL-ImageLabelデータセット
+(https://github.com/ndl-lab/imagetagdataset)
+を利用して、資料画像に対するタグを推定するモデルです。
 
 ## 1.概要
 NDL-ImageLabelを学習データとして、マルチラベル画像分類（1画像に対して複数のラベルを付与するタスク）を行う学習済モデル、推論ソースコード、学習用ソースコード、データセットを拡張するための次世代デジタルライブラリーAPIを利用した画像取得スクリプトを公開しています。
