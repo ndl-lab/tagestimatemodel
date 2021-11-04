@@ -38,7 +38,7 @@ NDl-ImageLabelのタグはタグ同士が緩やかな包含関係（例：pictur
 
 
 ## 3.モデルの再学習について
-datasetpdmフォルダ内にNDL-ImageLabelを展開するか、4で取得・分類したオリジナルな画像ファイルを、クラスごとに分けて配置してください。NDL-ImageLabelを利用する場合は、
+datasetpdmフォルダ内にNDL-ImageLabelを展開するか、4で取得・分類したオリジナルな画像ファイルを、クラスごとにフォルダに分けて配置してください。NDL-ImageLabelを利用する場合は、
 picture_personフォルダは存在しないので自分で取得する必要があります。
 配置後、multitrain_efficientnet.pyを実行するとweights_pdm_multiフォルダ内に学習済モデルが出力されます。
 
