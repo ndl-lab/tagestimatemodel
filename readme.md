@@ -45,7 +45,7 @@ picture_personフォルダは存在しないので自分で取得する必要が
 
 ## 4. 学習データを追加するには
 
-次世代デジタルライブラリーのAPIを利用すると、任意のタグについて、著作権保護期間満了資料から切り出された画像の情報を取得できます。例えば以下の例では、picture_landmark（屋外建造物写真）のタグがモデルによって付与された画像の情報が10画像分得られます。
+次世代デジタルライブラリーのAPIを利用すると、任意のタグについて、著作権保護期間満了資料から切り出された画像の情報を取得できます。例えば以下の例では、picture_landmark（屋外建造物写真）のタグが付与された画像の情報が10画像分得られます。
 ```
 curl https://lab.ndl.go.jp/dl/api/illustration/randomwithfacet?size=10&f-graphictags.tagname=picture_landmark
 ```
