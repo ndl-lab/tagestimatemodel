@@ -12,7 +12,7 @@ NDL-ImageLabelに加えて、一般公開していないpicture_personを含め�
 
 https://lab.ndl.go.jp/dataset/tagestimatemodel/weights_ndllabelimage.hdf5
 
-これは、次世代デジタルライブラリーにおいてタグの自動付与に用いているモデルと同じものです。
+これは、次世代デジタルライブラリーにおいてタグの自動付与に用いる（予定）モデルと同じものです。
 
 性能の目安として、NDL-ImageLabelのうちランダムな1割の画像をvalidation dataとした場合、validation scoreはmacro-F1 scoreで0.89～0.91程度になります。
 
