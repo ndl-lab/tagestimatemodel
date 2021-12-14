@@ -3,7 +3,8 @@ import json
 import os
 
 while 1:
-    rawdata=requests.get("https://lab.ndl.go.jp/dl/api/illustration/randomwithfacet?size=10&f-graphictags.tagname=graphic",
+    #f-graphictags.tagnameに取得したいタグ名を入れてください。（例えば以下は地図資料）
+    rawdata=requests.get("https://lab.ndl.go.jp/dl/api/illustration/randomwithfacet?size=10&f-graphictags.tagname=graphic_map",
                          headers={"content-type": "application/json"})
     for item in rawdata.json():
         print(item)
